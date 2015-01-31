@@ -1,0 +1,14 @@
+{
+  "name": "rhtml",
+  "version": "0.0.1",
+  "main": "./index",
+  "engines": {
+    "node": "0.10.28"
+  },
+  "dependencies": {
+    "ajax-request": "^1.1.0"
+  },
+  "scripts": {
+    "run": "./index.js"
+  }
+}
