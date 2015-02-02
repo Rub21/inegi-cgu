@@ -12,12 +12,12 @@ var open = require('open');
 
 //read file
 fs.readFile('inegi.json', 'utf8', downloading);
+
 function downloading(err, data) {
 	var json = JSON.parse(data);
 	console.log('Files to download : ' + json.length);
 	for (var i = 0; i < json.length; i++) {
-		console.log(json[i].entidad);
-		mkdirSync(path.join(json[i].entidad));
+		//mkdirSync(path.join(json[i].entidad));
 		open(json[i].url);
 	};
 }
