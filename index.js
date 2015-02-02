@@ -34,6 +34,9 @@ function dataLoaded(err, data) {
 		var edicion = '#GridResultados_ctl' + j + '_edicion';
 		var datum = '#GridResultados_ctl' + j + '_datum';
 		var soft = '#GridResultados_ctl' + j + '_desc_soft';
+		var url_file = $(soft + ' a').attr('href').replace('&idusr=0', '').replace('_d.zip', '_s.zip');
+		var id_file = url_file.substr(url_file.indexOf("SHP/"));
+		id_file = id_file.substr(id_file.indexOf("/SHP/") + 5).replace('_s.zip', '');
 		var json = {
 			clave: $(clave).text(),
 			entidad: $(entidad).text(),
@@ -41,7 +44,8 @@ function dataLoaded(err, data) {
 			escala: $(escala).text(),
 			edicion: $(edicion).text(),
 			datum: $(datum).text(),
-			url: 'http://www3.inegi.org.mx/sistemas/biblioteca/sfi/' + $(soft + ' a').attr('href').replace('&idusr=0', '').replace('_d.zip', '_s.zip')
+			url: 'http://www3.inegi.org.mx/sistemas/biblioteca/sfi/' + url_file,
+			id_file: id_file
 		};
 		data_inegi.push(json);
 	};

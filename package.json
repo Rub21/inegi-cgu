@@ -6,7 +6,8 @@
     "node": "0.10.28"
   },
   "dependencies": {
-    "ajax-request": "^1.1.0"
+    "ajax-request": "^1.1.0",
+    "open": "0.0.5"
   },
   "scripts": {
     "run": "./index.js"
