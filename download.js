@@ -1,15 +1,14 @@
 var fs = require('fs');
-var path = require('path');
-var request = require('request');
+// var path = require('path');
 var open = require('open');
 
-var mkdirSync = function(path) {
-	try {
-		fs.mkdirSync(path);
-	} catch (e) {
-		if (e.code != 'EEXIST') throw e;
-	}
-}
+// var mkdirSync = function(path) {
+// 	try {
+// 		fs.mkdirSync(path);
+// 	} catch (e) {
+// 		if (e.code != 'EEXIST') throw e;
+// 	}
+// }
 
 //read file
 fs.readFile('inegi.json', 'utf8', downloading);
